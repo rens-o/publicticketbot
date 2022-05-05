@@ -4,10 +4,13 @@
     "@discordjs/rest": "^0.3.0",
     "discord-api-types": "^0.31.0",
     "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
     "fs": "^0.0.1-security",
     "glob": "^7.2.0",
     "hastebin": "^0.2.1",
-    "nodemon": "^2.0.15"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "scrambleword.js": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

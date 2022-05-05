@@ -2,15 +2,10 @@ const discord = require("discord.js");
 
 
 module.exports = {
-    name: "ready",
-    async execute(client, message) {
+    name: "ready", async execute(client, message) {
         console.log(`${client.user.username} has successfully been deployed.`);
 
-        const statusOptions = [
-            "by Rens",
-            "Tickets",
-            "Chats"
-        ]
+        const statusOptions = ["by Rens", "Tickets", "Chats"]
 
         let counter = 0;
         let time = 5 * 1000;
@@ -20,8 +15,7 @@ module.exports = {
 
             client.user.setPresence({
 
-                status: "online",
-                activities: [{
+                status: "online", activities: [{
                     name: statusOptions[counter]
                 }]
 
@@ -35,26 +29,6 @@ module.exports = {
         }
 
         updateStatus()
-
-
-        const ticketEmbed = new discord.MessageEmbed()
-            .setTitle("Tickets")
-            .setFooter({text:`${client.user.username} Tickets`, iconURL: client.user.displayAvatarURL()})
-            .setDescription(`Click on the button below to create a ticket.`)
-            .setColor("RED")
-
-        const row = new discord.MessageActionRow()
-            .addComponents(
-                new discord.MessageButton()
-                    .setCustomId("support")
-                    .setLabel("Create a ticket")
-                    .setStyle("DANGER")
-                    .setEmoji("🎫")
-            )
-        const chan = client.channels.cache.get("919647936646897755")
-        chan.bulkDelete(1)
-       chan.send({embeds: [ticketEmbed], components: [row]})
-
 
     }
 }
