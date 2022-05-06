@@ -1,6 +1,5 @@
 const discord = require("discord.js");
-
-
+const config = require("../config.json");
 module.exports = {
     name: "ready",
     async execute(client, message) {
@@ -51,7 +50,7 @@ module.exports = {
                     .setStyle("DANGER")
                     .setEmoji("🎫")
             )
-        const chan = client.channels.cache.get("919647936646897755")
+        const chan = client.channels.cache.get(config.ticketChannel)
         chan.bulkDelete(1)
        chan.send({embeds: [ticketEmbed], components: [row]})
 
