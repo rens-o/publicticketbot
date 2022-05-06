@@ -1,5 +1,8 @@
 {
-  "token": "token",
-  "guildID": "908770565706358784",
-  "clientID": "961228402340266025"
+  "token": "Token of your discord bot",
+  "guildID": "Id of your server",
+  "clientID": "Id of your bot",
+  "ticketChannel": "Channel to send tickets to (id)" ,
+  "logChannel": "Channel id where to send the logs to (id)",
+  "supportRole": "Support/staff role ID"
 }
