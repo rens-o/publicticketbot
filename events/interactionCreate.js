@@ -1,6 +1,7 @@
 const {Permissions} = require("discord.js");
 const discord = require("discord.js");
 let hastebin = require('hastebin');
+const config = require("../config.json");
 module.exports = {
     name: "interactionCreate",
     async execute(interaction, client) {
@@ -30,7 +31,7 @@ module.exports = {
                             deny: [Permissions.FLAGS.VIEW_CHANNEL]
                         },
                         {
-                            id: "920313505662513193",
+                            id: config.supportRole,
                             allow: [Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.VIEW_CHANNEL, Permissions.FLAGS.ATTACH_FILES]
                         }
 
@@ -126,7 +127,7 @@ module.exports = {
                                 .setColor('2f3136')
                                 .setTimestamp();
 
-                            client.channels.cache.get("920313471780917288").send({
+                            client.channels.cache.get(config.logChannel).send({
                                 embeds: [embed]
                             });
                             client.users.cache.get(chan.topic).send({
