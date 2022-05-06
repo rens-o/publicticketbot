@@ -10,6 +10,6 @@ Free to use and copy, only if credits have been given.
 2. Open a new terminal and type the following: "npm install". < without the quotes ofcourse
 3. Fill in your token/id's in the config.json file
 4. Launch your bot with node index.js
-5. 
+
 # DO NOT FORGET TO SETUP SLASHCOMMANDS IN THE DEVELOPER PANEL: https://discord.com/developers
 # Have fun, for support, add me on discord: rens#1000
